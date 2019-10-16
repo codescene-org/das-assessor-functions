@@ -33,9 +33,10 @@ namespace SFA.DAS.Assessor.Functions.ApiClient
 
         public async Task<HttpResponseMessage> UpdateStandardSummary()
         {
-            var result = await Client.PostAsync("api/v1/oppfinder/update-standard-summary", null);
+            //var result = await Client.PostAsync("api/v1/oppfinder/update-standard-summary", null);
+            //return result;
+            var result = await Client.PostAsJsonAsync("api/v1/oppfinder/update-standard-summary", new { });
             return result;
-            //await Client.PostAsJsonAsync("api/v1/oppfinder/update-standard-summary", new { });
         }
     }
 }
