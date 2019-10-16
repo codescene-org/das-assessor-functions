@@ -5,7 +5,7 @@ namespace SFA.DAS.Assessor.Functions.ApiClient
 {
     public interface IAssessorServiceApiClient
     {
-        Task UpdateStandardSummary();
+        Task<HttpResponseMessage> UpdateStandardSummary();
         HttpClient Client { get; }
     }
 }

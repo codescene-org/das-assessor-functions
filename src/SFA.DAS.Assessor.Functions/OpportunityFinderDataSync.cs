@@ -30,7 +30,8 @@ namespace SFA.DAS.Assessor.Functions.OpportunityFinder
                 log.LogInformation($"Update standard summary function started");
                 log.LogInformation($"Using api base address: {_assessorApiClient.Client.BaseAddress}");
 
-                await _assessorApiClient.UpdateStandardSummary();
+                var result = await _assessorApiClient.UpdateStandardSummary();
+                log.LogInformation($"Result from API call: {result.StatusCode} {result.ReasonPhrase}");
 
                 log.LogInformation("Update standard summary function completed");
             }
